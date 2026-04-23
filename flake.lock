@@ -35,11 +35,11 @@
     "diskusage": {
       "flake": false,
       "locked": {
-        "lastModified": 1776959487,
-        "narHash": "sha256-jStDn5CLz5fqb5aEtIXN3YxjsWCazxIKTGPIHLGA3qQ=",
+        "lastModified": 1776962455,
+        "narHash": "sha256-a788bciIrtflV4H6nshdPJ+lgsvdiW9BDbMkzSgirnI=",
         "owner": "alcxyz",
         "repo": "DankDiskUsage",
-        "rev": "337453c222076fa3f5e46de60c0176b2e21257f7",
+        "rev": "f9849b3e4b3ba3bacd92e71fe97154068c54844c",
         "type": "github"
       },
       "original": {
