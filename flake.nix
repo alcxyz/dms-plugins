@@ -26,6 +26,10 @@
       url = "github:alcxyz/DankSpotify";
       flake = false;
     };
+    dankcalendar = {
+      url = "github:alcxyz/DankCalendar";
+      flake = false;
+    };
     diskusage = {
       url = "github:alcxyz/DankDiskUsage";
       flake = false;
