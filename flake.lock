@@ -16,6 +16,22 @@
         "type": "github"
       }
     },
+    "diskusage": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1776958350,
+        "narHash": "sha256-je/yvnFEJ04M99r5HRzrL7Dwn6PNL8UiAkWTOszpo3A=",
+        "owner": "alcxyz",
+        "repo": "DankDiskUsage",
+        "rev": "6ca9de44293cfa50ed831f16401bc834fa338de6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "alcxyz",
+        "repo": "DankDiskUsage",
+        "type": "github"
+      }
+    },
     "firstparty": {
       "flake": false,
       "locked": {
@@ -51,6 +67,7 @@
     "root": {
       "inputs": {
         "calculator": "calculator",
+        "diskusage": "diskusage",
         "firstparty": "firstparty",
         "quicksearch": "quicksearch",
         "spotify": "spotify",
