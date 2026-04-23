@@ -16,6 +16,22 @@
         "type": "github"
       }
     },
+    "firstparty": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1776364275,
+        "narHash": "sha256-KYx+n1stxLT4R9IDVRx3/Cl7TjCcBZjnQchbrXaBT2o=",
+        "owner": "AvengeMedia",
+        "repo": "dms-plugins",
+        "rev": "829922a8f11949b1c13ae8bd14d7176f9165b6f5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AvengeMedia",
+        "repo": "dms-plugins",
+        "type": "github"
+      }
+    },
     "quicksearch": {
       "flake": false,
       "locked": {
@@ -35,6 +51,7 @@
     "root": {
       "inputs": {
         "calculator": "calculator",
+        "firstparty": "firstparty",
         "quicksearch": "quicksearch",
         "spotify": "spotify",
         "translate": "translate",

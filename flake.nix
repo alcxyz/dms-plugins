@@ -26,6 +26,10 @@
       url = "github:alcxyz/DankSpotify";
       flake = false;
     };
+    firstparty = {
+      url = "github:AvengeMedia/dms-plugins";
+      flake = false;
+    };
   };
 
   outputs =
