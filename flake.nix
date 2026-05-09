@@ -3,35 +3,35 @@
 
   inputs = {
     worldclock = {
-      url = "git+ssh://git@git-ssh.alc.xyz/alcxyz/WorldClock.git?ref=main";
+      url = "git+https://git.alc.xyz/alcxyz/WorldClock.git?ref=main";
       flake = false;
     };
     calculator = {
-      url = "git+ssh://git@git-ssh.alc.xyz/alcxyz/DankCalculator.git?ref=main";
+      url = "git+https://git.alc.xyz/alcxyz/DankCalculator.git?ref=main";
       flake = false;
     };
     quicksearch = {
-      url = "git+ssh://git@git-ssh.alc.xyz/alcxyz/DankQuickSearch.git?ref=main";
+      url = "git+https://git.alc.xyz/alcxyz/DankQuickSearch.git?ref=main";
       flake = false;
     };
     vault = {
-      url = "git+ssh://git@git-ssh.alc.xyz/alcxyz/DankVault.git?ref=main";
+      url = "git+https://git.alc.xyz/alcxyz/DankVault.git?ref=main";
       flake = false;
     };
     translate = {
-      url = "git+ssh://git@git-ssh.alc.xyz/alcxyz/DankTranslate.git?ref=main";
+      url = "git+https://git.alc.xyz/alcxyz/DankTranslate.git?ref=main";
       flake = false;
     };
     spotify = {
-      url = "git+ssh://git@git-ssh.alc.xyz/alcxyz/DankSpotify.git?ref=main";
+      url = "git+https://git.alc.xyz/alcxyz/DankSpotify.git?ref=main";
       flake = false;
     };
     dankcalendar = {
-      url = "git+ssh://git@git-ssh.alc.xyz/alcxyz/DankCalendar.git?ref=main";
+      url = "git+https://git.alc.xyz/alcxyz/DankCalendar.git?ref=main";
       flake = false;
     };
     diskusage = {
-      url = "git+ssh://git@git-ssh.alc.xyz/alcxyz/DankDiskUsage.git?ref=main";
+      url = "git+https://git.alc.xyz/alcxyz/DankDiskUsage.git?ref=main";
       flake = false;
     };
     firstparty = {
