@@ -3,35 +3,35 @@
 
   inputs = {
     worldclock = {
-      url = "github:alcxyz/WorldClock";
+      url = "git+ssh://git@git-ssh.alc.xyz/alcxyz/WorldClock.git?ref=main";
       flake = false;
     };
     calculator = {
-      url = "github:alcxyz/DankCalculator";
+      url = "git+ssh://git@git-ssh.alc.xyz/alcxyz/DankCalculator.git?ref=main";
       flake = false;
     };
     quicksearch = {
-      url = "github:alcxyz/DankQuickSearch";
+      url = "git+ssh://git@git-ssh.alc.xyz/alcxyz/DankQuickSearch.git?ref=main";
       flake = false;
     };
     vault = {
-      url = "github:alcxyz/DankVault";
+      url = "git+ssh://git@git-ssh.alc.xyz/alcxyz/DankVault.git?ref=main";
       flake = false;
     };
     translate = {
-      url = "github:alcxyz/DankTranslate";
+      url = "git+ssh://git@git-ssh.alc.xyz/alcxyz/DankTranslate.git?ref=main";
       flake = false;
     };
     spotify = {
-      url = "github:alcxyz/DankSpotify";
+      url = "git+ssh://git@git-ssh.alc.xyz/alcxyz/DankSpotify.git?ref=main";
       flake = false;
     };
     dankcalendar = {
-      url = "github:alcxyz/DankCalendar";
+      url = "git+ssh://git@git-ssh.alc.xyz/alcxyz/DankCalendar.git?ref=main";
       flake = false;
     };
     diskusage = {
-      url = "github:alcxyz/DankDiskUsage";
+      url = "git+ssh://git@git-ssh.alc.xyz/alcxyz/DankDiskUsage.git?ref=main";
       flake = false;
     };
     firstparty = {
