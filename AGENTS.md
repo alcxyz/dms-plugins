@@ -16,6 +16,8 @@ When creating or modifying an owned plugin:
 - push `dev` to the GitHub `origin` only; do not dual-push to Forgejo;
 - keep `.github/workflows/ci.yml` byte-for-byte aligned with
   `templates/github/workflows/plugin-ci.yml`;
+- keep aggregate automation in GitHub Actions and have it update `dev`, not
+  `main`;
 - do not invent repo-specific release logic unless an ADR documents why;
 - use `test.sh` for plugin-specific shell/QML checks when present;
 - use `go.mod` and `go-version-file` for Go plugins;

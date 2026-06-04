@@ -60,6 +60,10 @@ Plugin changes, including workflow changes, are made on `dev`. Direct pushes to
 only; do not dual-push to Forgejo. `main` is updated by promoting `dev` through
 a GitHub pull request.
 
+The aggregate repo follows the same hosting rule. Scheduled maintenance workflows
+run in GitHub Actions and push lockfile updates to `dev`; Forgejo Actions
+workflows are not used for this repo.
+
 The local drift check is:
 
 `scripts/check-plugin-ci.sh`
