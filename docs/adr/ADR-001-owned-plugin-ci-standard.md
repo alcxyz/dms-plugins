@@ -11,6 +11,12 @@ cloned under this aggregator repo during development. The aggregator pulls the
 published plugin repositories as flake inputs, while each plugin repository owns
 its own CI/CD configuration.
 
+The repository hosting policy classifies `dms-plugins` and the public DMS plugin
+repositories as GitHub-first. GitHub is canonical for pull requests, releases,
+issues, public workflow state, and plugin-registry-facing assets. Forgejo
+mirrors are secondary continuity copies and should not be used as a parallel
+push target.
+
 The owned plugin pipelines perform the same core work:
 
 - validate `plugin.json`;
@@ -50,8 +56,9 @@ The workflow is capability-based instead of plugin-specific:
 - create or update the GitHub Release with the same hardened GitHub API flow.
 
 Plugin changes, including workflow changes, are made on `dev`. Direct pushes to
-`main` are not part of the working model. `main` is updated by promoting `dev`
-through the remote repository's normal review/merge flow.
+`main` are not part of the working model. Push `dev` to the GitHub `origin`
+only; do not dual-push to Forgejo. `main` is updated by promoting `dev` through
+a GitHub pull request.
 
 The local drift check is:
 
@@ -68,7 +75,7 @@ CI/CD behavior stays consistent across owned plugins without forcing every plugi
 to have the same implementation language or test files.
 
 Workflow changes must be made once in the template, then copied into each owned
-plugin repo on `dev` and promoted to `main` remotely.
+plugin repo on `dev` and promoted to `main` through GitHub.
 
 Intentional divergence requires a follow-up ADR explaining why that plugin cannot
 use the shared contract.
