@@ -1,3 +1,9 @@
 # Local plugin clones (pulled as flake inputs in production)
 */
 !.github/
+!docs/
+!docs/**
+!scripts/
+!scripts/**
+!templates/
+!templates/**
