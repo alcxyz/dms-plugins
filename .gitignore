@@ -1,3 +1,10 @@
 # Local plugin clones (pulled as flake inputs in production)
 */
 !.github/
+!.forgejo/
+!docs/
+!docs/**
+!scripts/
+!scripts/**
+!templates/
+!templates/**
