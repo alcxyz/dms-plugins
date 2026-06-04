@@ -34,6 +34,10 @@
       url = "github:alcxyz/DankDiskUsage/main";
       flake = false;
     };
+    aiusage = {
+      url = "github:alcxyz/DankAIUsage/main";
+      flake = false;
+    };
     firstparty = {
       url = "github:AvengeMedia/dms-plugins";
       flake = false;
