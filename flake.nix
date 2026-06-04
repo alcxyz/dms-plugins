@@ -15,7 +15,7 @@
       flake = false;
     };
     vault = {
-      url = "github:alcxyz/DankVault/main";
+      url = "github:alcxyz/DankVault/dev";
       flake = false;
     };
     translate = {
