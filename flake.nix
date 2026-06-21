@@ -35,7 +35,7 @@
       flake = false;
     };
     aiusage = {
-      url = "github:alcxyz/DankAIUsage/main";
+      url = "github:alcxyz/DankAIUsage/dev";
       flake = false;
     };
     firstparty = {
