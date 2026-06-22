@@ -3,16 +3,16 @@
     "aiusage": {
       "flake": false,
       "locked": {
-        "lastModified": 1780582621,
-        "narHash": "sha256-MWE0g6dUu5K3ZZcMgfQmw4hprroBb+CPMDHrCuf1xTw=",
+        "lastModified": 1782121744,
+        "narHash": "sha256-RBKVHF4YQqj9uBo0eDm6jiZaekCtILTXLbQOhUOhcpQ=",
         "owner": "alcxyz",
         "repo": "DankAIUsage",
-        "rev": "d61601fe02a3c496586404b93b332340844062dc",
+        "rev": "019dd0f732adb044b0681404b8a91adc148ed705",
         "type": "github"
       },
       "original": {
         "owner": "alcxyz",
-        "ref": "main",
+        "ref": "dev",
         "repo": "DankAIUsage",
         "type": "github"
       }
