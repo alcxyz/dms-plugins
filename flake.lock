@@ -3,11 +3,11 @@
     "aiusage": {
       "flake": false,
       "locked": {
-        "lastModified": 1782322644,
-        "narHash": "sha256-Y6AkdUzjcpWp9RiO+b+xKcDh0S3dxOuAoq0lezD3+ms=",
+        "lastModified": 1782323049,
+        "narHash": "sha256-LNugl2+SLvhUu5zFsAkA9jDcQkikjNm/aeBYjay/Gh8=",
         "owner": "alcxyz",
         "repo": "DankAIUsage",
-        "rev": "712ac7eeaa99b96a13a8422b00bb74add42b4efe",
+        "rev": "b2e8f68efcff9cfeaf329514307f306a43a59fae",
         "type": "github"
       },
       "original": {
