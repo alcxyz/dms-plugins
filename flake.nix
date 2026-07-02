@@ -15,7 +15,7 @@
       flake = false;
     };
     vault = {
-      url = "github:alcxyz/DankVault/main";
+      url = "github:alcxyz/DankVault/dev";
       flake = false;
     };
     translate = {
@@ -32,6 +32,10 @@
     };
     diskusage = {
       url = "github:alcxyz/DankDiskUsage/main";
+      flake = false;
+    };
+    aiusage = {
+      url = "github:alcxyz/DankAIUsage/dev";
       flake = false;
     };
     firstparty = {
