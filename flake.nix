@@ -27,7 +27,7 @@
       flake = false;
     };
     dankcalendar = {
-      url = "github:alcxyz/DankCalendar/main";
+      url = "github:alcxyz/DankCalendar/dev";
       flake = false;
     };
     diskusage = {

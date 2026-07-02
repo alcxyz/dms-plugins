@@ -37,16 +37,16 @@
     "dankcalendar": {
       "flake": false,
       "locked": {
-        "lastModified": 1780582625,
-        "narHash": "sha256-+LZpUz5uQTJkvlW3Vv3qKaFqIBPPZenFhEX4CPlzMjI=",
+        "lastModified": 1783000773,
+        "narHash": "sha256-HJxIVCSIjCAFL+aqX97wOM5NGo/3n4xVVL3/pkhgWeI=",
         "owner": "alcxyz",
         "repo": "DankCalendar",
-        "rev": "bce516c9898429618af38a94593864e4ea9041d7",
+        "rev": "e4edf7de5db2fe1f2837dc2880f1e5453e1c795f",
         "type": "github"
       },
       "original": {
         "owner": "alcxyz",
-        "ref": "main",
+        "ref": "dev",
         "repo": "DankCalendar",
         "type": "github"
       }
