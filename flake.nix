@@ -38,6 +38,10 @@
       url = "github:alcxyz/DankAIUsage/dev";
       flake = false;
     };
+    displaycontrol = {
+      url = "github:alcxyz/DankDisplayControl/dev";
+      flake = false;
+    };
     firstparty = {
       url = "github:AvengeMedia/dms-plugins";
       flake = false;
