@@ -68,6 +68,23 @@
         "type": "github"
       }
     },
+    "displaycontrol": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1784472500,
+        "narHash": "sha256-z2s8XkLlitcg2lc5UQSMBC0QrOgU8FBTFL91D/re7xA=",
+        "owner": "alcxyz",
+        "repo": "DankDisplayControl",
+        "rev": "f75bff1a6ef13dd857bf8e075fa4ddecc253f350",
+        "type": "github"
+      },
+      "original": {
+        "owner": "alcxyz",
+        "ref": "dev",
+        "repo": "DankDisplayControl",
+        "type": "github"
+      }
+    },
     "firstparty": {
       "flake": false,
       "locked": {
@@ -107,6 +124,7 @@
         "calculator": "calculator",
         "dankcalendar": "dankcalendar",
         "diskusage": "diskusage",
+        "displaycontrol": "displaycontrol",
         "firstparty": "firstparty",
         "quicksearch": "quicksearch",
         "spotify": "spotify",
