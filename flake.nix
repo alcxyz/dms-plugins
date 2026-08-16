@@ -10,6 +10,10 @@
       url = "github:alcxyz/DankCalculator/main";
       flake = false;
     };
+    screenshot = {
+      url = "github:alcxyz/DMS-Screenshot/main";
+      flake = false;
+    };
     quicksearch = {
       url = "github:alcxyz/DankQuickSearch/main";
       flake = false;

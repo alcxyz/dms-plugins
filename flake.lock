@@ -127,10 +127,28 @@
         "displaycontrol": "displaycontrol",
         "firstparty": "firstparty",
         "quicksearch": "quicksearch",
+        "screenshot": "screenshot",
         "spotify": "spotify",
         "translate": "translate",
         "vault": "vault",
         "worldclock": "worldclock"
+      }
+    },
+    "screenshot": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1786173229,
+        "narHash": "sha256-TjX+mcEdbl///VGCkjD2Cve17SBTV0PRbyEE8P0WbI4=",
+        "owner": "alcxyz",
+        "repo": "DMS-Screenshot",
+        "rev": "663eecc48d8532143c5995148aa561122d6bfd7e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "alcxyz",
+        "ref": "main",
+        "repo": "DMS-Screenshot",
+        "type": "github"
       }
     },
     "spotify": {
