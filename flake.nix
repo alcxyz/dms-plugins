@@ -39,7 +39,7 @@
       flake = false;
     };
     aiusage = {
-      url = "github:alcxyz/DankAIUsage/dev";
+      url = "github:alcxyz/DankAIUsage/main";
       flake = false;
     };
     displaycontrol = {
