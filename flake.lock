@@ -88,11 +88,11 @@
     "firstparty": {
       "flake": false,
       "locked": {
-        "lastModified": 1787856454,
-        "narHash": "sha256-AOEGBhjB6Vg3L2Tm1OTtdUZGV6fjKpEzmLAZrSQjHb4=",
+        "lastModified": 1788531069,
+        "narHash": "sha256-r8jPExx8Kyhk7XGFL9QxfnwvsNVSMMct/RcNMOukCww=",
         "owner": "AvengeMedia",
         "repo": "dms-plugins",
-        "rev": "cb66135b0af01eacb25f3a656dc86fb727fa02cf",
+        "rev": "2a0f6c57207545433f26b2af32b7d4e72b4c09e2",
         "type": "github"
       },
       "original": {
