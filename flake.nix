@@ -34,6 +34,10 @@
       url = "github:alcxyz/DankCalendar/main";
       flake = false;
     };
+    danksession = {
+      url = "github:alcxyz/DankSession/main";
+      flake = false;
+    };
     diskusage = {
       url = "github:alcxyz/DankDiskUsage/main";
       flake = false;
