@@ -3,11 +3,11 @@
     "aiusage": {
       "flake": false,
       "locked": {
-        "lastModified": 1788782976,
-        "narHash": "sha256-o/5i+nF2pEcj/Ywg4tt2QyDhafY/0iWyPZmbaCnKBko=",
+        "lastModified": 1788857412,
+        "narHash": "sha256-WWjNoVZ3lyKkTamrakhrcYrbzm1bpc6XO23Gil8fmAY=",
         "owner": "alcxyz",
         "repo": "DankAIUsage",
-        "rev": "97d7c999e1482a9cd67fa3ce4e89284e34105f28",
+        "rev": "42e0c8572e1913f2181be4cbb1a300a7f3acaeca",
         "type": "github"
       },
       "original": {
@@ -105,11 +105,11 @@
     "firstparty": {
       "flake": false,
       "locked": {
-        "lastModified": 1788531069,
-        "narHash": "sha256-r8jPExx8Kyhk7XGFL9QxfnwvsNVSMMct/RcNMOukCww=",
+        "lastModified": 1788827778,
+        "narHash": "sha256-KGpNgxN/zXiMjLLm4zLX+Wgnj1vx8bGGd6WwGBWo7Ds=",
         "owner": "AvengeMedia",
         "repo": "dms-plugins",
-        "rev": "2a0f6c57207545433f26b2af32b7d4e72b4c09e2",
+        "rev": "6fc7f25bfb24f93b6488fb8a36ed67b5f242abdb",
         "type": "github"
       },
       "original": {
@@ -206,11 +206,11 @@
     "vault": {
       "flake": false,
       "locked": {
-        "lastModified": 1780577035,
-        "narHash": "sha256-pAlNNYYRJQSI368j+1M7Vrbt6EL18hMiYWZk2AjNiH4=",
+        "lastModified": 1788859086,
+        "narHash": "sha256-MK1L2WSAbbD1iyIcSqggxCn9s+Ru7UD4WolacveAsdE=",
         "owner": "alcxyz",
         "repo": "DankVault",
-        "rev": "7d8f8442591ce7db22b57e2dbde9e77edf640fdb",
+        "rev": "a0314dfa323f13d33bd710e731c8b5fcabf18f94",
         "type": "github"
       },
       "original": {
