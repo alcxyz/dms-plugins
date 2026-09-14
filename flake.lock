@@ -3,11 +3,11 @@
     "aiusage": {
       "flake": false,
       "locked": {
-        "lastModified": 1789116426,
-        "narHash": "sha256-Tubx/lvTBkb5tlLqEgt0hT/nyH4WCA+IBvdRPgSZG0s=",
+        "lastModified": 1789311266,
+        "narHash": "sha256-p2zL7bwVxOWvswsB6OqkoxXGst4eqDXoxKynNDGt9Qo=",
         "owner": "alcxyz",
         "repo": "DankAIUsage",
-        "rev": "ddc9181e6e58ce3255d8e1c640e4ccb231be026a",
+        "rev": "bb94d58527daf77ced740764a0fe2271eecd67d5",
         "type": "github"
       },
       "original": {
@@ -37,11 +37,11 @@
     "dankcalendar": {
       "flake": false,
       "locked": {
-        "lastModified": 1783070555,
-        "narHash": "sha256-VtiBjO+XzihoRTGPe6l4WoK9onaj/BGmy4Xmj5BhE7I=",
+        "lastModified": 1789311178,
+        "narHash": "sha256-oCV4x6oteG/msD9D0snGGNnNc5mUfqJup0St+n4P7y4=",
         "owner": "alcxyz",
         "repo": "DankCalendar",
-        "rev": "0d204e8450cc9c6d832fa8a092d6b282deea4c0b",
+        "rev": "49ebb97f5fe9fffb3c7906147fe479924a2e495e",
         "type": "github"
       },
       "original": {
@@ -54,11 +54,11 @@
     "danksession": {
       "flake": false,
       "locked": {
-        "lastModified": 1788788267,
-        "narHash": "sha256-mzFlFiTRyyA0Esfwr3rIteOi7lr+vjak7GJM2duqpuI=",
+        "lastModified": 1789311174,
+        "narHash": "sha256-9fRZI8B72BIKBXIGbPcnUKh6hSsriMKNPswgu0gNPww=",
         "owner": "alcxyz",
         "repo": "DankSession",
-        "rev": "685ab95a425a9334d310d00429ee833aba575b89",
+        "rev": "560b6cd47cf103dbca8118d34e1dd0aa921a7bf7",
         "type": "github"
       },
       "original": {
