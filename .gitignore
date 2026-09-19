@@ -1,9 +1,12 @@
 # Local plugin clones (pulled as flake inputs in production)
 */
 !.github/
+!.github/**
 !docs/
 !docs/**
 !scripts/
 !scripts/**
 !templates/
 !templates/**
+__pycache__/
+*.pyc
