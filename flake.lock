@@ -88,11 +88,11 @@
     "displaycontrol": {
       "flake": false,
       "locked": {
-        "lastModified": 1784473286,
-        "narHash": "sha256-07ZLud8as9NXEwwMjeRdR8CpvEdTP1uKgtElR93PCJ8=",
+        "lastModified": 1789831165,
+        "narHash": "sha256-u9JSpw/H8K5mZ5FpJfmj76GXJdtM1vZrlX+3QoIeV88=",
         "owner": "alcxyz",
         "repo": "DankDisplayControl",
-        "rev": "788226cf09c6e1f68582fb0937c3df323c843f8c",
+        "rev": "acbcf4b16c644f5405b33e8d6f41f2cd72f69c46",
         "type": "github"
       },
       "original": {
@@ -206,11 +206,11 @@
     "vault": {
       "flake": false,
       "locked": {
-        "lastModified": 1788859086,
-        "narHash": "sha256-MK1L2WSAbbD1iyIcSqggxCn9s+Ru7UD4WolacveAsdE=",
+        "lastModified": 1789831165,
+        "narHash": "sha256-ymYQUSLZXgU1pFcYnK+2NVR+KIaNHRwTgy9vHQhD/BY=",
         "owner": "alcxyz",
         "repo": "DankVault",
-        "rev": "a0314dfa323f13d33bd710e731c8b5fcabf18f94",
+        "rev": "4a26cd716147a8572e776a49c29d216f29fec57d",
         "type": "github"
       },
       "original": {

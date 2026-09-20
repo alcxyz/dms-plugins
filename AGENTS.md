@@ -25,3 +25,6 @@ When creating or modifying an owned plugin:
 - release from `main` only using `plugin.json` version tags;
 - promote `dev` to `main` through a GitHub pull request;
 - run `scripts/check-plugin-ci.sh` before finishing pipeline work.
+- keep build identity copies aligned with `templates/build-identity/` and run
+  `scripts/check-build-identity.sh` when changing plugin packaging; stamp only
+  packaged manifests, never the tracked release version.

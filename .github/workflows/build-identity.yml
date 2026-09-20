@@ -1,0 +1,29 @@
+name: Build identity
+on:
+  push:
+    branches: [dev, main]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '35 5 * * *'
+permissions:
+  contents: read
+jobs:
+  packaging:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        plugin: [DankAIUsage, DankCalendar, DankDiskUsage, DankDisplayControl, DankQuickSearch, DankSession, DankSpotify, DankTranslate, DankVault]
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/checkout@v6
+        with:
+          repository: ${{ github.repository_owner }}/${{ matrix.plugin }}
+          ref: dev
+          path: ${{ matrix.plugin }}
+      - name: Check canonical build identity
+        run: bash scripts/check-build-identity.sh '${{ matrix.plugin }}'
+      - name: Test package identity
+        working-directory: ${{ matrix.plugin }}
+        run: python3 -m unittest discover -s tests -p 'test_package.py'
