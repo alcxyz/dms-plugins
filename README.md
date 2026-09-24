@@ -37,3 +37,19 @@ bash scripts/check-plugin-ci.sh /path/to/plugin
 The build-identity workflow checks owned plugin `dev` branches for drift and runs
 their self-contained package tests. Publish synchronized plugin copies before
 the corresponding aggregate template update.
+
+## Releases and changelogs
+
+Each owned plugin keeps a `CHANGELOG.md` (start from `templates/CHANGELOG.md`).
+Features and fixes add a sentence under `[Unreleased]`; a release commit bumps
+`plugin.json`, renames that section to `## [X.Y.Z] - YYYY-MM-DD`, and opens a
+new empty `[Unreleased]`. The shared workflow validates the changelog on every
+push and publishes the version's section as the GitHub release notes; it
+refuses to release without one (ADR-003).
+
+To republish notes for existing releases from the changelog:
+
+```sh
+bash scripts/publish-release-notes.sh DankAIUsage            # every released tag
+bash scripts/publish-release-notes.sh DankAIUsage v1.2.0     # selected tags
+```

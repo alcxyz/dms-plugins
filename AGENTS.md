@@ -27,6 +27,14 @@ When creating or modifying an owned plugin:
 - use `go.mod` and `go-version-file` for Go plugins;
 - validate `plugin.json` and semver in CI;
 - release from `main` only using `plugin.json` version tags;
+- keep `CHANGELOG.md` in the Keep a Changelog form from `templates/CHANGELOG.md`;
+  add a user-facing sentence under `[Unreleased]` with every feature or fix,
+  and make a release one commit that bumps `plugin.json`, dates the section,
+  and starts a new empty `[Unreleased]` (ADR-003); CI refuses releases without
+  a non-empty section for the manifest version;
+- fix or backfill published release notes with
+  `scripts/publish-release-notes.sh <plugin> [tags...]`, never by hand-editing
+  the GitHub release;
 - promote `dev` to `main` through a GitHub pull request;
 - run `scripts/check-plugin-ci.sh` before finishing pipeline work.
 - keep build identity copies aligned with `templates/build-identity/` and run

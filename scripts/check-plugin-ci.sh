@@ -26,7 +26,7 @@ if [ "$#" -gt 0 ]; then
 else
   for dir in "$ROOT"/*; do
     [ -d "$dir" ] || continue
-    [ -d "$dir/.git" ] || continue
+    [ -e "$dir/.git" ] || continue
     [ -f "$dir/plugin.json" ] || continue
     plugins+=("$dir")
   done
@@ -39,15 +39,31 @@ fi
 
 status=0
 for plugin_dir in "${plugins[@]}"; do
-  name="${plugin_dir#$ROOT/}"
+  name="${plugin_dir#"$ROOT"/}"
   workflow="$plugin_dir/.github/workflows/ci.yml"
 
   if [ ! -f "$plugin_dir/plugin.json" ]; then
-    echo "Skipping $name: no plugin.json" >&2
+    echo "Invalid plugin $name: no plugin.json" >&2
+    status=1
     continue
   fi
 
   if [ "$FIX" = true ]; then
+    if cmp -s "$TEMPLATE" "$workflow"; then
+      echo "ok $name"
+      continue
+    fi
+    branch="$(git -C "$plugin_dir" branch --show-current)"
+    if [ "$branch" != dev ]; then
+      echo "Refusing to sync $name on $branch; switch to dev first." >&2
+      status=1
+      continue
+    fi
+    if [ -n "$(git -C "$plugin_dir" status --porcelain -- .github/workflows/ci.yml)" ]; then
+      echo "Refusing to overwrite local workflow changes in $name; review them first." >&2
+      status=1
+      continue
+    fi
     mkdir -p "$plugin_dir/.github/workflows"
     cp "$TEMPLATE" "$workflow"
     echo "synced $name"
