@@ -55,6 +55,12 @@ The workflow is capability-based instead of plugin-specific:
 - tag `vX.Y.Z` from `plugin.json`;
 - create or update the GitHub Release with the same hardened GitHub API flow.
 
+The manifest check also verifies required metadata and local component/settings
+files, allowing QML URL query parameters. Release tags are immutable: a push
+with an already released version at a different commit does not edit that
+release or mark it latest again. Annotated and lightweight tags are both resolved
+to commits. Re-running the release commit can finish an interrupted release.
+
 Plugin changes, including workflow changes, are made on `dev`. Direct pushes to
 `main` are not part of the working model. Push `dev` to the GitHub `origin`
 only; do not dual-push to Forgejo. `main` is updated by promoting `dev` through
@@ -70,6 +76,19 @@ The local drift check is:
 
 The script compares every nested owned plugin clone's `.github/workflows/ci.yml`
 against the canonical template. It can also sync workflows with `--fix`.
+Syncing requires each target clone to be on `dev` and refuses to overwrite local
+workflow edits; worktree clones are supported.
+
+Aggregate GitHub CI runs offline regression tests for the workflow's manifest
+and tag scripts and checks the nine owned source repositories' `dev` workflows
+against the template on pushes, pull requests, and daily. Upstream forks are
+excluded. When adding an owned source repository, add it to the drift job's
+matrix in `.github/workflows/ci.yml`.
+
+For template updates, sync and validate the owned plugin clones, publish those
+workflow changes to their `dev` branches, and then validate the aggregate PR.
+The cross-repository drift check will fail until all copies match. Keep each
+plugin's normal release promotion separate from syncing its CI copy.
 
 ## Consequences
 
