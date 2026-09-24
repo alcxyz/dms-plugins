@@ -13,6 +13,10 @@ mirrors are secondary continuity copies, not the normal push target.
 When creating or modifying an owned plugin:
 
 - make changes on `dev`; do not push directly to `main`;
+- never add `Co-authored-by`, `Co-committed-by`, or other AI attribution to
+  commits, squash-merge messages, or pull request descriptions, and never
+  commit under an AI or tool identity (see the Commits rules in
+  `~/AGENTS.md`);
 - push `dev` to the GitHub `origin` only; do not dual-push to Forgejo;
 - keep `.github/workflows/ci.yml` byte-for-byte aligned with
   `templates/github/workflows/plugin-ci.yml`;
