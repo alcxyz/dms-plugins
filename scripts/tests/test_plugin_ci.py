@@ -128,3 +128,107 @@ class WorkflowTests(unittest.TestCase):
         result = self.run_script(step_script("release", "Auto-tag release"), **environment, GH_EXIT="1")
         self.assertNotEqual(result.returncode, 0)
         self.assertFalse((self.root / "output").exists())
+
+
+CHANGELOG = """# Changelog
+
+## [Unreleased]
+
+## [1.2.3] - 2026-09-24
+
+- Show prepaid credit balances.
+- Page reset history four at a time.
+
+## [1.0.0] - 2026-09-01
+
+- Initial release.
+"""
+
+
+class ChangelogTests(unittest.TestCase):
+    def setUp(self):
+        self.temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temporary.cleanup)
+        self.root = Path(self.temporary.name)
+        (self.root / "plugin.json").write_text(json.dumps({"version": "1.2.3"}))
+
+    def run_script(self, script, **environment):
+        return subprocess.run(
+            ["bash", "-e", "-o", "pipefail", "-c", script],
+            cwd=self.root,
+            env={**os.environ, **environment},
+            text=True,
+            capture_output=True,
+        )
+
+    def validate(self, changelog):
+        if changelog is not None:
+            (self.root / "CHANGELOG.md").write_text(changelog)
+        return self.run_script(step_script("test", "Validate CHANGELOG.md"))
+
+    def test_changelog_with_unreleased_and_current_version_passes(self):
+        result = self.validate(CHANGELOG)
+        self.assertEqual(result.returncode, 0, result.stderr)
+
+    def test_changelog_problems_fail_validation(self):
+        cases = {
+            "missing file": None,
+            "no unreleased section": CHANGELOG.replace("## [Unreleased]\n\n", ""),
+            "unreleased not first": CHANGELOG.replace("## [Unreleased]\n\n", "") + "\n## [Unreleased]\n",
+            "no section for version": CHANGELOG.replace("[1.2.3]", "[1.2.4]"),
+            "empty section for version": CHANGELOG.replace(
+                "- Show prepaid credit balances.\n- Page reset history four at a time.\n", ""
+            ),
+            "released section without date": CHANGELOG.replace("[1.2.3] - 2026-09-24", "[1.2.3]"),
+            "dated unreleased section": CHANGELOG.replace("[Unreleased]", "[Unreleased] - 2026-09-24"),
+            "malformed heading": CHANGELOG.replace("## [1.0.0] - 2026-09-01", "## 1.0.0"),
+            "duplicate section": CHANGELOG + "\n## [1.2.3] - 2026-09-25\n\n- Again.\n",
+        }
+        for name, changelog in cases.items():
+            with self.subTest(case=name):
+                result = self.validate(changelog)
+                self.assertNotEqual(result.returncode, 0, result.stdout)
+
+    def git(self, *arguments):
+        return subprocess.check_output(
+            ["git", *arguments], cwd=self.root, text=True, stderr=subprocess.PIPE,
+        ).strip()
+
+    def render(self, changelog=CHANGELOG, tags=("v1.0.0", "v1.2.3")):
+        (self.root / "CHANGELOG.md").write_text(changelog)
+        self.git("init", "--quiet")
+        self.git("config", "user.name", "CI test")
+        self.git("config", "user.email", "ci@example.invalid")
+        self.git("config", "commit.gpgsign", "false")
+        self.git("config", "tag.gpgsign", "false")
+        self.git("commit", "--allow-empty", "-m", "Initial")
+        for tag in tags:
+            self.git("tag", tag)
+        return self.run_script(
+            step_script("release", "Render release notes"),
+            VERSION="v1.2.3", GITHUB_REPOSITORY="example/plugin",
+        )
+
+    def test_release_notes_come_from_changelog_section(self):
+        result = self.render()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        notes = (self.root / "release-notes.md").read_text()
+        self.assertTrue(notes.startswith("- Show prepaid credit balances.\n- Page reset history four at a time.\n"))
+        self.assertIn("**Full changelog:** https://github.com/example/plugin/compare/v1.0.0...v1.2.3", notes)
+        self.assertNotIn("Initial release", notes)
+
+    def test_first_release_links_commit_history(self):
+        result = self.render(tags=("v1.2.3",))
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("https://github.com/example/plugin/commits/v1.2.3", (self.root / "release-notes.md").read_text())
+
+    def test_render_fails_without_section_content(self):
+        result = self.render(changelog=CHANGELOG.replace("[1.2.3]", "[1.2.4]"))
+        self.assertNotEqual(result.returncode, 0)
+        self.assertFalse((self.root / "release-notes.md").exists())
+
+    def test_publish_script_extracts_the_same_render_step(self):
+        script = subprocess.check_output(
+            ["bash", str(ROOT / "scripts/publish-release-notes.sh"), "--print-render-script"], text=True,
+        )
+        self.assertEqual(script.strip(), step_script("release", "Render release notes").strip())
