@@ -50,6 +50,12 @@ class LinkedForkTests(unittest.TestCase):
             self.fork, target_is_directory=True
         )
 
+        physical_fork = self.aggregate / "WorldClock"
+        (physical_fork / ".github/workflows").mkdir(parents=True)
+        (physical_fork / ".git").mkdir()
+        (physical_fork / "plugin.json").write_text("{}")
+        (physical_fork / ".github/workflows/ci.yml").write_text("upstream workflow\n")
+
     def check(self, *args):
         return subprocess.run(
             ["bash", str(self.aggregate / "scripts/check-plugin-ci.sh"), *args],
@@ -62,6 +68,7 @@ class LinkedForkTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn("ok DankVault", result.stdout)
         self.assertNotIn("DankDisplayControl", result.stdout)
+        self.assertNotIn("WorldClock", result.stdout)
 
     def test_fix_refuses_explicit_fork_paths(self):
         for path in (self.aggregate / "DankDisplayControl", self.fork):

@@ -26,6 +26,9 @@ if [ "$#" -gt 0 ]; then
 else
   for dir in "$ROOT"/*; do
     [ -d "$dir" ] || continue
+    case "$(basename "$dir")" in
+      DankCalculator|WorldClock|DankDisplayControl) continue ;;
+    esac
     [ -L "$dir" ] && continue
     [ -e "$dir/.git" ] || continue
     [ -f "$dir/plugin.json" ] || continue
