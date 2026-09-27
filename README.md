@@ -2,12 +2,15 @@
 
 This repository bundles pinned plugin sources in `srcs` and maintains copied
 tooling for the owned plugin repositories. Upstream forks retain their own
-packaging conventions.
+packaging conventions. The canonical local clones of DankCalculator, WorldClock,
+and DankDisplayControl live in `~/src/forks/`; optional symlinks here make them
+easy to reach without making them owned repositories. These local symlinks are
+ignored by Git and do not affect the flake inputs.
 
 ## Development builds
 
 The canonical files in `templates/build-identity/` are copied into DankAIUsage,
-DankCalendar, DankDiskUsage, DankDisplayControl, DankQuickSearch, DankSession,
+DankCalendar, DankDiskUsage, DankQuickSearch, DankSession,
 DankSpotify, DankTranslate and DankVault. Each repository supplies a small
 `packaging.json` selecting its installed directory and optional Go helper.
 

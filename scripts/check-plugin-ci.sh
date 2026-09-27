@@ -26,6 +26,7 @@ if [ "$#" -gt 0 ]; then
 else
   for dir in "$ROOT"/*; do
     [ -d "$dir" ] || continue
+    [ -L "$dir" ] && continue
     [ -e "$dir/.git" ] || continue
     [ -f "$dir/plugin.json" ] || continue
     plugins+=("$dir")
@@ -41,6 +42,19 @@ status=0
 for plugin_dir in "${plugins[@]}"; do
   name="${plugin_dir#"$ROOT"/}"
   workflow="$plugin_dir/.github/workflows/ci.yml"
+
+  case "$(basename "$plugin_dir")" in
+    DankCalculator|WorldClock|DankDisplayControl)
+      echo "Excluded upstream fork $name: owned-plugin workflow checks do not apply." >&2
+      status=1
+      continue
+      ;;
+  esac
+  if [ -L "$plugin_dir" ]; then
+    echo "Excluded linked checkout $name: owned-plugin workflow checks do not follow symlinks." >&2
+    status=1
+    continue
+  fi
 
   if [ ! -f "$plugin_dir/plugin.json" ]; then
     echo "Invalid plugin $name: no plugin.json" >&2

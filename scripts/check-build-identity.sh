@@ -4,11 +4,23 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 TEMPLATE="$ROOT/templates/build-identity"
 plugins=("$@")
 if [ "${#plugins[@]}" -eq 0 ]; then
-  plugins=(DankAIUsage DankCalendar DankDiskUsage DankDisplayControl DankQuickSearch DankSession DankSpotify DankTranslate DankVault)
+  plugins=(DankAIUsage DankCalendar DankDiskUsage DankQuickSearch DankSession DankSpotify DankTranslate DankVault)
 fi
 status=0
 for plugin in "${plugins[@]}"; do
   case "$plugin" in /*) path="$plugin" ;; *) path="$ROOT/$plugin" ;; esac
+  case "$(basename "$path")" in
+    DankCalculator|WorldClock|DankDisplayControl)
+      echo "Excluded upstream fork $plugin: owned-plugin build identity checks do not apply." >&2
+      status=1
+      continue
+      ;;
+  esac
+  if [ -L "$path" ]; then
+    echo "Excluded linked checkout $plugin: owned-plugin build identity checks do not follow symlinks." >&2
+    status=1
+    continue
+  fi
   for file in scripts/package.py tests/test_package.py build-version.nix build-metadata.nix; do
     if ! cmp -s "$TEMPLATE/$file" "$path/$file"; then
       echo "build identity drift: $plugin/$file" >&2

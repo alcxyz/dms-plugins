@@ -1,5 +1,9 @@
 # ADR-001: Standardize Owned Plugin CI
 
+**Scope update:** [ADR-004](ADR-004-local-upstream-fork-layout.md) clarifies that
+DankDisplayControl is an upstream fork and supersedes its inclusion in the
+owned-plugin count and checks below.
+
 ## Status
 
 Accepted

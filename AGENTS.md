@@ -1,7 +1,12 @@
 # DMS Plugin Repo Rules
 
 Owned plugin repositories are cloned as nested git repositories under this repo.
-The aggregator repo keeps policy and templates; each plugin repo keeps its own
+DankCalculator, WorldClock, and DankDisplayControl are upstream forks; their
+canonical local clones live in `~/src/forks/` and may be linked here for
+navigation. A linked fork is not an owned plugin and is excluded from owned
+workflow and build-identity checks (ADR-004).
+
+The aggregator repo keeps policy and templates; each owned plugin repo keeps its own
 self-contained workflow files so forks continue to work without depending on a
 central reusable workflow.
 
