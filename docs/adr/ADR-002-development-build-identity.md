@@ -1,5 +1,8 @@
 # ADR-002: Shared development build identity for owned plugins
 
+**Scope update:** [ADR-004](ADR-004-local-upstream-fork-layout.md) excludes
+DankDisplayControl from the owned-plugin template checks.
+
 **Status:** Accepted
 **Date:** 2026-09-19
 

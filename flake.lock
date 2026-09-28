@@ -71,11 +71,11 @@
     "diskusage": {
       "flake": false,
       "locked": {
-        "lastModified": 1790230886,
-        "narHash": "sha256-SyLiUonCtm3SiAoIMdkzN+BHEFEkjikPv0VrJC1iqlM=",
+        "lastModified": 1790591165,
+        "narHash": "sha256-xYpBnELnWQcunmbMzRNSlTcGwU9xMkXq0x7TXRRmv7Q=",
         "owner": "alcxyz",
         "repo": "DankDiskUsage",
-        "rev": "ccd6c57018377023523bf7263ba454b828856355",
+        "rev": "0499c3c9f988a121f6777686bb8dda3b5e852f44",
         "type": "github"
       },
       "original": {
@@ -88,11 +88,11 @@
     "displaycontrol": {
       "flake": false,
       "locked": {
-        "lastModified": 1790230736,
+        "lastModified": 1790508826,
         "narHash": "sha256-vsQojjD7Omt7TkOC5SkhxaKIzoJGCD72j7iFPajDsiU=",
         "owner": "alcxyz",
         "repo": "DankDisplayControl",
-        "rev": "9c3389199224876de531c6a1c5a3208919510387",
+        "rev": "fc19067e0a65a5c1607c87f23efb8b0cb2cb9186",
         "type": "github"
       },
       "original": {
@@ -206,11 +206,11 @@
     "vault": {
       "flake": false,
       "locked": {
-        "lastModified": 1790230973,
-        "narHash": "sha256-wmoWsCAWjkpAS3vJxR/R61rwRzzpEsvlTs1V4evuY+4=",
+        "lastModified": 1790507185,
+        "narHash": "sha256-ESY0KeGS0kchpwOEODeNDwR2/flVcZWLtlthrKVH3e0=",
         "owner": "alcxyz",
         "repo": "DankVault",
-        "rev": "b88d0dccb40d0c4a651349dbf50f416625c9d8a9",
+        "rev": "2d359e512d6f8accdd5a843081f8de6cd498caab",
         "type": "github"
       },
       "original": {
