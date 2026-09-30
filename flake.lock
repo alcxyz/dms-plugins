@@ -206,11 +206,11 @@
     "vault": {
       "flake": false,
       "locked": {
-        "lastModified": 1790507185,
-        "narHash": "sha256-ESY0KeGS0kchpwOEODeNDwR2/flVcZWLtlthrKVH3e0=",
+        "lastModified": 1790720490,
+        "narHash": "sha256-gQsPlcvH1kyCPikA8Yx63QJAecIMxTL9fMZ73dlyGls=",
         "owner": "alcxyz",
         "repo": "DankVault",
-        "rev": "2d359e512d6f8accdd5a843081f8de6cd498caab",
+        "rev": "15dfc3f24790f004d1145749f8eb953166075626",
         "type": "github"
       },
       "original": {
