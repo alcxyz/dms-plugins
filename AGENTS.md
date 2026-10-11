@@ -40,11 +40,12 @@ When creating or modifying an owned plugin:
 - fix or backfill published release notes with
   `scripts/publish-release-notes.sh <plugin> [tags...]`, never by hand-editing
   the GitHub release;
-- promote `dev` to `main` through a GitHub pull request, squash-merged with an
-  explicit subject and body; its head is `dev` itself, so never pass
-  `--delete-branch`. Afterwards merge `origin/main` back into `dev` and push.
-  `pr-review` on the promotion reviews the whole `dev..main` diff, so expect
-  findings on features already reviewed; land fixes on `dev` before merging;
+- promote the plugin's `dev` to `main` through a GitHub pull request,
+  squash-merged with an explicit subject and body; its head is `dev` itself, so
+  never pass `--delete-branch`. Afterwards merge `origin/main` back into `dev`
+  and push. `pr-review` on the promotion reviews the whole `main...dev` diff,
+  so expect findings on features already reviewed; land fixes on `dev` before
+  merging. (The aggregate repo's own automated promotion uses a merge commit.);
 - run `scripts/check-plugin-ci.sh` before finishing pipeline work.
 - keep build identity copies aligned with `templates/build-identity/` and run
   `scripts/check-build-identity.sh` when changing plugin packaging; stamp only
