@@ -3,15 +3,17 @@
 
   inputs = {
     worldclock = {
-      url = "github:rochacbruno/WorldClock/main";
+      # Exact upstream revisions: the daily input update must not promote
+      # unreviewed third-party commits (ADR-004).
+      url = "github:rochacbruno/WorldClock/061752535b5b38f8290edb7108a25cb5f779d405";
       flake = false;
     };
     calculator = {
-      url = "github:rochacbruno/DankCalculator/main";
+      url = "github:rochacbruno/DankCalculator/07d7c123a5aee9ac4fd4347bbae36d5957b021f9";
       flake = false;
     };
     screenshot = {
-      url = "github:JDKamalakar/DMS-Screenshot/main";
+      url = "github:JDKamalakar/DMS-Screenshot/663eecc48d8532143c5995148aa561122d6bfd7e";
       flake = false;
     };
     quicksearch = {

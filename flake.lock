@@ -29,8 +29,8 @@
       },
       "original": {
         "owner": "rochacbruno",
-        "ref": "main",
         "repo": "DankCalculator",
+        "rev": "07d7c123a5aee9ac4fd4347bbae36d5957b021f9",
         "type": "github"
       }
     },
@@ -164,8 +164,8 @@
       },
       "original": {
         "owner": "JDKamalakar",
-        "ref": "main",
         "repo": "DMS-Screenshot",
+        "rev": "663eecc48d8532143c5995148aa561122d6bfd7e",
         "type": "github"
       }
     },
@@ -232,8 +232,8 @@
       },
       "original": {
         "owner": "rochacbruno",
-        "ref": "main",
         "repo": "WorldClock",
+        "rev": "061752535b5b38f8290edb7108a25cb5f779d405",
         "type": "github"
       }
     }
