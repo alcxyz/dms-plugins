@@ -40,3 +40,5 @@ commits of their own, so the flake now pins their upstream repositories
 directly. Each input names an exact revision rather than a branch: the daily
 input update would otherwise promote unreviewed third-party commits to `main`
 within a day. Moving one of these inputs is a reviewed change to `flake.nix`.
+The first-party `AvengeMedia/dms-plugins` input follows the same rule: it is
+third-party code that the daily update would otherwise promote unreviewed.

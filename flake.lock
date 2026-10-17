@@ -115,6 +115,7 @@
       "original": {
         "owner": "AvengeMedia",
         "repo": "dms-plugins",
+        "rev": "a8a508bc371e7c3f2c7862d8840b88cf5c63978f",
         "type": "github"
       }
     },
