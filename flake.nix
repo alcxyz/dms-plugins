@@ -53,7 +53,8 @@
       flake = false;
     };
     firstparty = {
-      url = "github:AvengeMedia/dms-plugins";
+      # Exact upstream revision, like the plugin inputs above (ADR-004).
+      url = "github:AvengeMedia/dms-plugins/a8a508bc371e7c3f2c7862d8840b88cf5c63978f";
       flake = false;
     };
   };
