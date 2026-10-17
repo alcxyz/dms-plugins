@@ -3,15 +3,15 @@
 
   inputs = {
     worldclock = {
-      url = "github:alcxyz/WorldClock/main";
+      url = "github:rochacbruno/WorldClock/main";
       flake = false;
     };
     calculator = {
-      url = "github:alcxyz/DankCalculator/main";
+      url = "github:rochacbruno/DankCalculator/main";
       flake = false;
     };
     screenshot = {
-      url = "github:alcxyz/DMS-Screenshot/main";
+      url = "github:JDKamalakar/DMS-Screenshot/main";
       flake = false;
     };
     quicksearch = {
