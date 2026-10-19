@@ -22,15 +22,15 @@
       "locked": {
         "lastModified": 1770921929,
         "narHash": "sha256-bhV22bL38CJp58Y8tCY8sEBRYxmuk671fEymmdg0Yuk=",
-        "owner": "alcxyz",
+        "owner": "rochacbruno",
         "repo": "DankCalculator",
         "rev": "07d7c123a5aee9ac4fd4347bbae36d5957b021f9",
         "type": "github"
       },
       "original": {
-        "owner": "alcxyz",
-        "ref": "main",
+        "owner": "rochacbruno",
         "repo": "DankCalculator",
+        "rev": "07d7c123a5aee9ac4fd4347bbae36d5957b021f9",
         "type": "github"
       }
     },
@@ -115,6 +115,7 @@
       "original": {
         "owner": "AvengeMedia",
         "repo": "dms-plugins",
+        "rev": "a8a508bc371e7c3f2c7862d8840b88cf5c63978f",
         "type": "github"
       }
     },
@@ -157,15 +158,15 @@
       "locked": {
         "lastModified": 1786173229,
         "narHash": "sha256-TjX+mcEdbl///VGCkjD2Cve17SBTV0PRbyEE8P0WbI4=",
-        "owner": "alcxyz",
+        "owner": "JDKamalakar",
         "repo": "DMS-Screenshot",
         "rev": "663eecc48d8532143c5995148aa561122d6bfd7e",
         "type": "github"
       },
       "original": {
-        "owner": "alcxyz",
-        "ref": "main",
+        "owner": "JDKamalakar",
         "repo": "DMS-Screenshot",
+        "rev": "663eecc48d8532143c5995148aa561122d6bfd7e",
         "type": "github"
       }
     },
@@ -225,15 +226,15 @@
       "locked": {
         "lastModified": 1772134198,
         "narHash": "sha256-g1MB9gzYQYvn0LuGSbwAzqParC6XOKJK8PtttsdwF14=",
-        "owner": "alcxyz",
+        "owner": "rochacbruno",
         "repo": "WorldClock",
         "rev": "061752535b5b38f8290edb7108a25cb5f779d405",
         "type": "github"
       },
       "original": {
-        "owner": "alcxyz",
-        "ref": "main",
+        "owner": "rochacbruno",
         "repo": "WorldClock",
+        "rev": "061752535b5b38f8290edb7108a25cb5f779d405",
         "type": "github"
       }
     }
