@@ -1,6 +1,8 @@
 # Local plugin clones (pulled as flake inputs in production)
 */
 # Local links to upstream fork checkouts
+/DankCalculator
+/WorldClock
 /DankDisplayControl
 !.github/
 !.github/**
