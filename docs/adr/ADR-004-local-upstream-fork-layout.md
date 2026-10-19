@@ -42,3 +42,11 @@ input update would otherwise promote unreviewed third-party commits to `main`
 within a day. Moving one of these inputs is a reviewed change to `flake.nix`.
 The first-party `AvengeMedia/dms-plugins` input follows the same rule: it is
 third-party code that the daily update would otherwise promote unreviewed.
+
+## Amendment (2026-10-19)
+
+The DankCalculator, WorldClock and DMS-Screenshot forks are deleted, with their
+local clones and symlinks, now that `main` pins their upstreams. The layout
+above applies to DankDisplayControl only. The checks keep excluding the
+DankCalculator and WorldClock names, since a checkout under either name is an
+upstream plugin, not an owned one.
