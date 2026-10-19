@@ -2,10 +2,11 @@
 
 This repository bundles pinned plugin sources in `srcs` and maintains copied
 tooling for the owned plugin repositories. Upstream forks retain their own
-packaging conventions. The canonical local clones of DankCalculator, WorldClock,
-and DankDisplayControl live in `~/src/forks/`; optional symlinks here make them
-easy to reach without making them owned repositories. These local symlinks are
-ignored by Git and do not affect the flake inputs.
+packaging conventions. The canonical local clone of DankDisplayControl lives in
+`~/src/forks/`; an optional symlink here makes it easy to reach without making
+it an owned repository. The local symlink is ignored by Git and does not affect
+the flake inputs. DankCalculator, WorldClock and DMS-Screenshot have no fork:
+the flake pins their upstreams (ADR-004).
 
 ## Development builds
 
