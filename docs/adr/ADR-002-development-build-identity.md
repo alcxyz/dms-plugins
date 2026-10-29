@@ -1,10 +1,9 @@
 # ADR-002: Shared development build identity for owned plugins
 
-**Scope update:** [ADR-004](ADR-004-local-upstream-fork-layout.md) excludes
-DankDisplayControl from the owned-plugin template checks.
-
 **Status:** Accepted
 **Date:** 2026-09-19
+**Updated:** 2026-09-27 (DankDisplayControl excluded, per ADR-004)
+**History:** [replaced text](archive/ADR-002-development-build-identity-history.md)
 
 ## Decision
 
@@ -30,7 +29,9 @@ release. Do not create per-commit Git tags or stamp tracked release manifests.
 Run scripts/check-build-identity.sh alongside the canonical workflow check.
 Each plugin runs the copied packaging tests through test.sh, so forks remain
 self-contained. Aggregate build-identity CI checks copies for drift after
-fetching the owned plugin dev branches. Upstream forks are outside this rollout.
+fetching the owned plugin dev branches. Upstream forks, including
+DankDisplayControl ([ADR-004](ADR-004-local-upstream-fork-layout.md)), are
+outside this rollout.
 
 ## Alternatives and consequences
 

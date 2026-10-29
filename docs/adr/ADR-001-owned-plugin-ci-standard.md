@@ -1,12 +1,10 @@
 # ADR-001: Standardize Owned Plugin CI
 
-**Scope update:** [ADR-004](ADR-004-local-upstream-fork-layout.md) clarifies that
-DankDisplayControl is an upstream fork and supersedes its inclusion in the
-owned-plugin count and checks below.
-
 ## Status
 
-Accepted
+Accepted. Updated 2026-09-27: DankDisplayControl is an upstream fork, not an
+owned plugin ([ADR-004](ADR-004-local-upstream-fork-layout.md)).
+History: [replaced text](archive/ADR-001-owned-plugin-ci-standard-history.md).
 
 ## Context
 
@@ -84,9 +82,10 @@ Syncing requires each target clone to be on `dev` and refuses to overwrite local
 workflow edits; worktree clones are supported.
 
 Aggregate GitHub CI runs offline regression tests for the workflow's manifest
-and tag scripts and checks the nine owned source repositories' `dev` workflows
-against the template on pushes, pull requests, and daily. Upstream forks are
-excluded. When adding an owned source repository, add it to the drift job's
+and tag scripts and checks the eight owned source repositories' `dev` workflows
+against the template on pushes, pull requests, and daily. Upstream forks,
+including DankDisplayControl, are excluded
+([ADR-004](ADR-004-local-upstream-fork-layout.md)). When adding an owned source repository, add it to the drift job's
 matrix in `.github/workflows/ci.yml`.
 
 For template updates, sync and validate the owned plugin clones, publish those

@@ -4,3 +4,6 @@
 - [ADR-002: Development build identity](ADR-002-development-build-identity.md)
 - [ADR-003: Changelog-driven release notes](ADR-003-changelog-driven-release-notes.md)
 - [ADR-004: Local layout for upstream plugin forks](ADR-004-local-upstream-fork-layout.md)
+
+Each accepted ADR states the current decision. Replaced text, and superseded
+or retired ADRs, are kept in the [archive](archive/README.md).
